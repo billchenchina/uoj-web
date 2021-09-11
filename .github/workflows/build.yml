@@ -1,0 +1,19 @@
+on: [push, pull_request]
+
+name: Build
+jobs:
+  build:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          apt-get -y update && apt-get -y install curl --no-install-recommends
+          curl -fsSL https://get.docker.com/ | sh
+      - name: Build Docker Image
+        run: |
+          docker build -t uoj .
+
+
+        
