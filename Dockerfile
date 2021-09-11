@@ -4,7 +4,6 @@ WORKDIR /opt/
 COPY 000-uoj.conf /etc/apache2/sites-available/000-uoj.conf
 COPY src /opt/uoj/web
 RUN \
-sed -i 's|security.ubuntu.com|mirrors.hit.edu.cn|g' /etc/apt/sources.list && sed -i 's|archive.ubuntu.com|mirrors.hit.edu.cn|g' /etc/apt/sources.list && \
 apt-get -y update && \
 apt-get -y install gnupg && \
 echo "deb http://ppa.launchpad.net/stesie/libv8/ubuntu bionic main" | tee /etc/apt/sources.list.d/stesie-libv8.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D858A0DF && \
