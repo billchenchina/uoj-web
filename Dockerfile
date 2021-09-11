@@ -17,7 +17,6 @@ phpize && ./configure --with-php-config=/usr/bin/php-config --with-v8js=/opt/lib
 # apt-get -y install mysql-server cmake fp-compiler && \
 # apt-get -y install python python3 python3-requests openjdk-8-jdk openjdk-11-jdk && \
 
-RUN cd /opt/uoj/web && ls -al && cd /etc/apache2/sites-available/ && ls -al
 RUN \
 a2ensite 000-uoj.conf && a2dissite 000-default.conf && \
 a2enmod rewrite headers && sed -i -e '172s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf && \
