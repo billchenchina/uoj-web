@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
       - name: Install dependencies
         run: |
           apt-get -y update && apt-get -y install curl --no-install-recommends

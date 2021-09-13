@@ -7,7 +7,7 @@ RUN \
 apt-get -y update && \
 apt-get -y install gnupg && \
 echo "deb http://ppa.launchpad.net/stesie/libv8/ubuntu bionic main" | tee /etc/apt/sources.list.d/stesie-libv8.list && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D858A0DF && \
-apt-get -y update && apt-get -y install vim ntp zip unzip curl wget apache2 libapache2-mod-xsendfile libapache2-mod-php php php-dev php-pear php-zip php-mysql php-mbstring re2c libv8-7.5-dev libyaml-dev git build-essential
+apt-get -y update && apt-get -y install vim ntp zip unzip curl wget apache2 libapache2-mod-xsendfile libapache2-mod-php php php-dev php-pear php-zip php-mysql php-mbstring re2c libv8-7.5-dev libyaml-dev git build-essential cmake
 
 RUN \
 yes | pecl install yaml && \
