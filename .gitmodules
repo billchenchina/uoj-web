@@ -1,0 +1,3 @@
+[submodule "uoj_judger"]
+	path = uoj_judger
+	url = git@github.com:billchenchina/uoj_judger.git
